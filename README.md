@@ -1,4 +1,5 @@
 # BookViewer
+![image](https://github.com/SantosAssassin/book-viewer/assets/33922110/a4a6443e-627b-4eb0-9507-fccaae44f26a)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
 
