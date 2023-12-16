@@ -9,10 +9,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Steps to run application
 1. Install angular version 17.0.5
-2. Install 20.10.0
+2. Install node 20.10.0
 3. open the project in VsCode / any other IDE
-4. Run npm install
-5. Run ng serve
+4. Run `npm install`
+5. Run `ng serve`
 
 ## Code scaffolding
 
