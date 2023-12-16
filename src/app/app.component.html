@@ -1,0 +1,18 @@
+<div class="main">
+  <app-header (openModal)="openAddBookModal()"/>
+
+  <!-- landing -->
+  <h2 class="welcome">Welcome !!</h2>
+  <img class="landing" src="../assets/images/landing-author.jpg" alt="landing">
+
+  <!-- Author details -->
+  @if (bookDetails?.data) {
+    <app-author-details [authorDetails]="bookDetails.data"/>
+  }
+  <!-- Books list -->
+  @if (bookDetails) {
+    <app-book-list [bookDetails]="bookDetails"/>
+  }
+  <app-footer/>
+
+</div>

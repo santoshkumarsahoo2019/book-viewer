@@ -1,0 +1,28 @@
+    header {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        right: 0;
+        width: fit-content;
+        height: 60px;
+        background-color: transparent;
+        display: flex;
+        justify-content: end;
+        vertical-align: middle;
+        padding: 10px;
+        max-width: 1366px;
+
+        nav {
+            padding-top: 10px;
+            margin-right: 40px;
+
+            button {
+                background-color: #fff;
+                border-radius: 25px;
+                color: green;
+                cursor: pointer;
+                border: 1px solid #9f9595;
+                padding: 7px 15px;
+            }
+        }
+    }

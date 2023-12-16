@@ -1,0 +1,91 @@
+@mixin buttonStyle() {
+    background-color: #fff;
+    border-radius: 25px;
+    color: green;
+    cursor: pointer;
+    border: 1px solid #9f9595;
+    padding: 7px 15px;
+}
+
+.books-card {
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 20px;
+
+    .book-sort {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .book-layout {
+        margin: 20px 0px 20px 0px;
+        border: 1px solid rgb(216, 216, 216);
+        padding: 15px 5px;
+        border-radius: 20px;
+
+        .book-img {
+            height: 100%;
+            width: 90%;
+            border-radius: 20px;
+
+        }
+
+        .book-details {
+            position: relative;
+            padding-top: 20px;
+
+            ::ng-deep .mat-grid-tile-content {
+                text-align: left;
+                padding: 10px;
+                align-items: baseline;
+                justify-content: start;
+            }
+
+            .title {
+                font-weight: 600;
+                text-decoration: underline;
+                margin-bottom: 15px !important;
+                cursor: pointer;
+                font-size: 18px;
+
+                // elipsis
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .published {
+                font-style: italic;
+                font-size: 16px;
+            }
+
+            .action-buttons{
+                text-align: center;
+
+                button{
+                    @include buttonStyle;
+                    margin-bottom: 10px;
+                }
+    
+                .buy {
+                    margin-top: 20px;
+                    width: 80%;
+                }
+    
+                .edit{
+                    width: 80%;
+                }
+    
+                .delete{
+                    width: 80%;
+                }
+            }
+
+        }
+    }
+
+}

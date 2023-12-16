@@ -1,0 +1,70 @@
+<!-- Books list -->
+<div class="books-card">
+
+  <!-- Sort books -->
+  <div class="book-sort">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+          <h2>Books by {{bookDetails?.data?.author}}</h2>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center p-2">
+          <span>Sort by : </span>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+              <mat-button-toggle value="a-z" (change)="sortByAtoZ()">A-Z</mat-button-toggle>
+              <mat-button-toggle value="z-a" (change)="sortByZtoA()">Z-A</mat-button-toggle>
+              <mat-button-toggle value="publish" (change)="sortByPublish()">Publish</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sort books end -->
+
+  <mat-divider></mat-divider>
+
+  <!-- Display books grid -->
+  <div class="book-list">
+    
+    <div class="container">
+
+      <div class="row gy-2 gx-5">
+
+        @for (book of bookDetails?.data?.books; track $index) {
+        <div class="col-md-6 col-sm-12">
+  
+          <div class="row book-layout">
+  
+            <div class="col-md-6 col-sm-12 text-center">
+
+              <!-- Book Thumnail -->
+              <img class="book-img" [src]="book.imageUrl" onError="this.src='../assets/images/404.png'" alt="$index">
+
+            </div>
+  
+            <!-- Book details -->
+            <div class="col-md-6 col-sm-12 book-details">
+                <h4 class="title" [matTooltip]="book.title" (click)="onBuy(book.purchaseLink)">{{book.title}}</h4>
+                <h4 class="published">Published on : {{book.PublishDate}}</h4>
+  
+                <mat-divider></mat-divider>
+
+                <div class="action-buttons">
+                  <button mat-raised-button class="buy" (click)="onBuy(book.purchaseLink)">Buy</button>
+                  <button mat-raised-button class="edit" (click)="onEdit(book, $index)">Edit</button>
+                  <button mat-raised-button class="delete" (click)="onDelete($index)">Delete</button>
+                </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+        }
+  
+      </div>
+    </div>
+  </div>
+  <!-- Display books grid end -->
+
+</div>
